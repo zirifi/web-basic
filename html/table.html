@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  table, th, td {
+    border:1px solid black;
+  }
+  </style>
+
+<body>
+  <!-- table>tr*2>td*2 : 2*2테이블 만드는 에밋 방법  -->
+  <table>
+    <tr>
+      <td>1</td>
+      <td rowspan="2">2</td>
+      <!-- rowspan : 특정 행 합치기 -->
+    </tr>
+    <tr>
+      <td>3</td>
+    </tr>
+  </table>
+
+
+  <table>
+    <tr>
+      <td colspan="2">123</td>
+      <!-- colspan : 특정 열 합치기 -->
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </table>
+  
+  <br>
+  <!-- ctrl + / : 주석 -->
+  <table>
+    <tr>
+      <td>1</td>
+      <td>한석봉</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>홍길동</td>
+    </tr>
+  </table>
+</body>
+</html>
