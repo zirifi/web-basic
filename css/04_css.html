@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* 모든 태그에 적용 */
-        div {
-            border: 1px solid red;
-        }
-        /* id 셀렉터 (앞에 # 붙이면 된다.) */
-        #div1 {
-            background-color: aquamarine;
-        }
-        #div2 {
-            background-color: cadetblue;
-        }
-        /* class 셀렉터 (앞에 . 찍으면 된다.) */
-        .group1 {
-            background-color: gray ;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 모든 태그에 적용 */
+    div {
+      border: 1px solid red;
+    }
 
-        .text-color-white {
-            /* left, right 에서 start, end 로 바뀐 이유
+    /* id 셀렉터 (앞에 # 붙이면 된다.) */
+    #div1 {
+      background-color: aquamarine;
+    }
+
+    #div2 {
+      background-color: cadetblue;
+    }
+
+    /* class 셀렉터 (앞에 . 찍으면 된다.) */
+    .group1 {
+      background-color: gray;
+    }
+
+    .text-color-white {
+      /* left, right 에서 start, end 로 바뀐 이유
             : 특정 나라의 쓰기, 읽기 방식의 차이 ex) 아랍권*/
-            text-align: end;
-            text-decoration: line-through;
-            text-transform: uppercase;
-            text-indent: 60px;
-            font-size: 50px;
-            color: white;
-        }
-    </style>
+      text-align: end;
+      text-decoration: line-through;
+      text-transform: uppercase;
+      text-indent: 60px;
+      font-size: 50px;
+      color: white;
+    }
+  </style>
 </head>
-<body>
-    <!-- class : 다른 특성을 가진 것들을 묶어줌 -->
-    <div class="group1 text-color-white">hello</div>
-    <!-- span : 자기 자신만큼의 박스 -->
-    <span class="group1">world</span>
 
-    <!-- id는 유일해야 한다. -->
-    <div id="div1">Hello</div>
-    <div id="div2">world</div>
+<body>
+  <!-- class : 다른 특성을 가진 것들을 묶어줌 -->
+  <div class="group1 text-color-white">hello</div>
+  <!-- span : 자기 자신만큼의 박스 -->
+  <span class="group1">world</span>
+
+  <!-- id는 유일해야 한다. -->
+  <div id="div1">Hello</div>
+  <div id="div2">world</div>
 </body>
+
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 모든 태그에 적용 */
+    div {
+      border: 2px solid green;
+    }
+
+    span {
+      border: 2px initial red;
+    }
+
+    /* id 셀렉터 (앞에 # 붙이면 된다.) */
+    #div1 {
+      background-color: aquamarine;
+    }
+
+    #div2 {
+      background-color: cadetblue;
+    }
+
+    #div3 {
+      background-color: brown;
+    }
+
+    .span_class1 {
+      background-color: gray;
+    }
+
+    /* class 셀렉터 (앞에 . 찍으면 된다.) */
+    .div_class {
+      background-color: blueviolet;
+    }
+
+    .text-color-white {
+      /* left, right 에서 start, end 로 바뀐 이유
+      : 특정 나라의 쓰기, 읽기 방식의 차이 ex) 아랍권*/
+      text-align: end;
+      text-decoration: line-through;
+      text-transform: uppercase;
+      text-indent: 60px;
+      font-size: 50px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div_class" id="div1">
+    <span>Hello</span>
+    <span class="span_class1 text-color-white">text</span>
+    <span class="span_class" id="span1">text1</span>
+    <span class="span_class" id="span12">text2</span>
+    <span class="span_class" id="span13">text3</span>
+  </div>
+
+  <div class="div_class" id="div2">
+    <span class="span_class1" id="span1">text1</span>
+    <span class="span_class" id="span22">text2</span>
+    <span class="span_class" id="span23">text3</span>
+  </div>
+
+  <div class="div_class" id="div3">
+    <span class="span_class" id="span31">text1</span>
+    <span class="span_class" id="span32">text2</span>
+    <span class="span_class" id="span33">text3</span>
+  </div>
+
+</body>
+
+</html>
