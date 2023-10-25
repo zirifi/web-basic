@@ -20,11 +20,22 @@
         .group1 {
             background-color: gray ;
         }
+
+        .text-color-white {
+            /* left, right 에서 start, end 로 바뀐 이유
+            : 특정 나라의 쓰기, 읽기 방식의 차이 ex) 아랍권*/
+            text-align: end;
+            text-decoration: line-through;
+            text-transform: uppercase;
+            text-indent: 60px;
+            font-size: 50px;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <!-- class : 다른 특성을 가진 것들을 묶어줌 -->
-    <div class="group1">hello</div>
+    <div class="group1 text-color-white">hello</div>
     <!-- span : 자기 자신만큼의 박스 -->
     <span class="group1">world</span>
 
