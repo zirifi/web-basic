@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모든 태그에 적용 */
+        div {
+            border: 1px solid red;
+        }
+        /* id 셀렉터 (앞에 # 붙이면 된다.) */
+        #div1 {
+            background-color: aquamarine;
+        }
+        #div2 {
+            background-color: cadetblue;
+        }
+        /* class 셀렉터 (앞에 . 찍으면 된다.) */
+        .group1 {
+            background-color: gray ;
+        }
+    </style>
+</head>
+<body>
+    <!-- class : 다른 특성을 가진 것들을 묶어줌 -->
+    <div class="group1">hello</div>
+    <!-- span : 자기 자신만큼의 박스 -->
+    <span class="group1">world</span>
+
+    <!-- id는 유일해야 한다. -->
+    <div id="div1">Hello</div>
+    <div id="div2">world</div>
+</body>
+</html>
