@@ -8,14 +8,14 @@
   <script>
     function whatName() {
       let text = prompt("이름이 무엇입니까?");
-      
-      if(text == null || text == '') {
+
+      if (text == null || text == '') {
         alert('입력해주세요');
         whatName();
       }
       else {
         console.log(text);
-        alert(text+'님 안녕하세요');
+        alert(text + '님 안녕하세요');
       }
     }
 
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-  <button onclick="whatName()">click</button>
+  <button onclick="whatName()">What is name?</button>
 </body>
 
 </html>
