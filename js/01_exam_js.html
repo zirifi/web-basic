@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function whatName() {
+      let text = prompt("이름이 무엇입니까?");
+      
+      if(text == null || text == '') {
+        alert('입력해주세요');
+        whatName();
+      }
+      else {
+        console.log(text);
+        alert(text+'님 안녕하세요');
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <button onclick="whatName()">click</button>
+</body>
+
+</html>
