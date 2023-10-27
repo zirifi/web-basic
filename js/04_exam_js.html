@@ -9,10 +9,12 @@
     function inputNumber() {
       let num = prompt("숫자를 입력하시오");
       console.log(num);
-      if (typeof num !== 'number') {
+      if (isNaN(num)) {
+        //isNaN 은 단어면 true, 숫자면 false 반환
+        //typeof parseInt(num) !== 'number' 의 결과값은 true 가 된다. NaN 도 number 로 인식
         alert('숫자를 입력해주세요');
       } else {
-        if (num < 1 || num > 100) {
+        if (1 <= num && num <= 100) {
           alert('1 이상 100 이하를 넣어주세요');
         } else {
           for (let i = 1; i <= 100; i++) {
