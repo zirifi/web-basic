@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .big-text {
+      font-size: xx-large;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="textField">
+  <button id="inputButton">입력</button>
+  <div id="container" class="center">
+    <div id="result" class="big-text">big text</div>
+    <button onclick="changeColor('빨강', 'red')">빨강</button>
+    <button onclick="changeColor('파랑', 'blue')">파랑</button>
+    <button onclick="changeColor('초록', 'green')">초록</button>
+    <button onclick="changeColor('노랑', 'yellow')">노랑</button>
+    <button onclick="changeColor('??', '#123456')">??</button>
+  </div>
+  
+  
+  <script>
+    const inputButton = document.getElementById('inputButton');
+    const textField = document.getElementById('textField');
+    const resultText = document.getElementById('result');
+    const container = document.getElementById('container');
+
+    // container.style.visibility = 'hidden';
+
+    inputButton.addEventListener('click', function() {
+      console.log(textField.value);
+
+      const text = textField.value;
+      
+      if(text === '') {
+        alert('텍스트 값을 입력해 주세요');
+      } else {
+        resultText.textContent = text;
+        textField.textContent = '';
+
+        container.style.visibility = 'visible';
+      }
+    });
+
+    function changeColor(colorText, color) {
+      alert(`${color} 색으로 변경됩니다.`);
+
+        resultText.style.color = color;
+    }
+
+
+
+  </script>
+</body>
+</html>
