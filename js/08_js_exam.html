@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text {
+            display: inline-block;
+            padding: 10px;
+            width : 100px;
+            margin: 10px;
+            border: 1px solid black;
+            text-align: center;
+            color : white;
+            background-color: gray;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class=text id="div1">html</div>
+    <div class=text id="div2">css</div>
+    <div class=text id="div3">javascript</div>
+
+<script>
+    //   const div1 = document.getElementById('div1');
+    //   const div2 = document.getElementById('div2');
+    //   const div13 = document.getElementById('div3');
+  
+      div1.addEventListener('click', function() {
+        div1.style.backgroundColor = 'white';
+        div2.style.backgroundColor = 'gray';
+        div3.style.backgroundColor = 'gray';
+        div1.style.color = 'black'
+        div2.style.color = 'white'
+        div3.style.color = 'white'
+      });
+      div2.addEventListener('click', function() {
+        div2.style.backgroundColor = 'white';
+        div1.style.backgroundColor = 'gray';
+        div3.style.backgroundColor = 'gray';
+        div2.style.color = 'black'
+        div1.style.color = 'white'
+        div3.style.color = 'white'
+      });
+      div3.addEventListener('click', function() {
+        div3.style.backgroundColor = 'white';
+        div1.style.backgroundColor = 'gray';
+        div2.style.backgroundColor = 'gray';
+        div3.style.color = 'black'
+        div1.style.color = 'white'
+        div2.style.color = 'white'
+      });
+    </script>
+</body>
+</html>
