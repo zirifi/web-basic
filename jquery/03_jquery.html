@@ -7,28 +7,29 @@
   <title>Document</title>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
-    <style>
-      .big-text {
-        font-size: xx-large;
-      }
-      .center {
-        text-align: center;
-      }
-    </style>
+  <style>
+    .big-text {
+      font-size: xx-large;
+    }
 
-    <script>
-      $(function () {
-        $("#redButton").click(function() {
-          $('#textResult').css('color', 'red'), alert('빨강색으로 변경됩니다.');
-        });
-        $("#blueButton").click(function() {
-          $('#textResult').css('color', 'blue'), alert('파랑색으로 변경됩니다.');
-        });
-        $("#greenButton").click(function() {
-          $('#textResult').css('color', 'green'), alert('초록색으로 변경됩니다.');
-        });
+    .center {
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    $(function () {
+      $("#redButton").click(function () {
+        $('#textResult').css('color', 'red'), alert('빨강색으로 변경됩니다.');
       });
-    </script>
+      $("#blueButton").click(function () {
+        $('#textResult').css('color', 'blue'), alert('파랑색으로 변경됩니다.');
+      });
+      $("#greenButton").click(function () {
+        $('#textResult').css('color', 'green'), alert('초록색으로 변경됩니다.');
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -48,18 +49,14 @@
 
       const text = $('#textField').val();
 
-      if(text === null || text === '') {
+      if (text === null || text === '') {
         alert('텍스트 값을 입력해주세요');
-        // 값이 없으면 경고창
       } else {
         $('#textResult').html(text);
       }
     });
   </script>
 
-  <!-- “무슨무슨 색으로 변경됩니다.” 라고 경고창이 뜨면서
-  입력된 텍스트의 색이 변경되게 해봅시다. -->
-  
 </body>
 
 </html>
