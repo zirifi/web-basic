@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <style>
+      .big-text {
+        font-size: xx-large;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+
+    <script>
+      $(function () {
+        $("#redButton").click(function() {
+          $('#textResult').css('color', 'red'), alert('빨강색으로 변경됩니다.');
+        });
+        $("#blueButton").click(function() {
+          $('#textResult').css('color', 'blue'), alert('파랑색으로 변경됩니다.');
+        });
+        $("#greenButton").click(function() {
+          $('#textResult').css('color', 'green'), alert('초록색으로 변경됩니다.');
+        });
+      });
+    </script>
+</head>
+
+<body>
+  <input type="text" id="textField">
+  <button id="textInputButton">text 입력</button>
+  <!-- 텍스트 값을 입력 -->
+  <div id="container" class="center">
+    <div id="textResult" class="big-text"></div>
+  </div>
+  <button id="redButton">빨강</button>
+  <button id="blueButton">파랑</button>
+  <button id="greenButton">초록</button>
+
+  <script>
+    $('#textInputButton').click(function () {
+      console.log($('#textField').val());
+
+      const text = $('#textField').val();
+
+      if(text === null || text === '') {
+        alert('텍스트 값을 입력해주세요');
+        // 값이 없으면 경고창
+      } else {
+        $('#textResult').html(text);
+      }
+    });
+  </script>
+
+  <!-- “무슨무슨 색으로 변경됩니다.” 라고 경고창이 뜨면서
+  입력된 텍스트의 색이 변경되게 해봅시다. -->
+  
+</body>
+
+</html>
