@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <style>
+    .box1 {
+      width: 250px;
+      height: 70px;
+      background-color: blue;
+    }
+
+    .box2 {
+      position: absolute;
+      top: 8px;
+      left: 188px;
+      width: 70px;
+      height: 250px;
+      background-color: chartreuse;
+    }
+
+    .box3 {
+      position: absolute;
+      top: 250px;
+      left: 70px;
+      width: 188px;
+      height: 70px;
+      background-color: purple;
+    }
+
+    .box4 {
+      position: absolute;
+      top: 78px;
+      width: 70px;
+      height: 242px;
+      background-color: red;
+    }
+
+    .box5 {
+      position: absolute;
+      top: 78px;
+      left: 78px;
+      width: 70px;
+      height: 242px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+  <div class="box4"></div>
+  <div class="box5">
+    <img src="ChatTitle.png" width="110px" height="172px">
+  </div>
+
+  <script>
+    $('div').hide();
+    $('img').hide();
+
+
+    $('.box2').show.animate({ left: '250px' }, function () {
+      $('.box3').show.animate({
+        left: '70px',
+        top: '250px'
+      }, function () {
+        $('.box4').show().animate({ top: '78px' });
+      });
+    });
+    // 미완성 
+  </script>
+</body>
+
+</html>
