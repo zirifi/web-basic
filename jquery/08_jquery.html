@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
 
-    <style>
-        table,tr,td,th{
-            border: 1px solid black;
-        }
-    </style>
+  <style>
+    table,
+    tr,
+    td,
+    th {
+      border: 1px solid;
+    }
+  </style>
+
 </head>
+
 <body>
-    <table>
-        <tr>
-            <td><input type="checkbox" name="" id="">확인</td>
-            <td>제목</td>
-            <td>글쓴시간</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" name="" id=""></td>
-            <td>1111</td>
-            <td>11:11:11</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" name="" id=""></td>
-            <td>2222</td>
-            <td>22:22:22</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox" name="" id=""></td>
-            <td>3333</td>
-            <td>33:33:33</td>
-        </tr>
-    </table>
+  <!-- table>tr*4>td*3 -->
+  <table>
+    <tr>
+      <th>
+        <input type="checkbox" name="" id="">확인
+      </th>
+      <th>제목</th>
+      <th>글쓴시간</th>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="board" id="">
+      </td>
+      <td class="title">11111</td>
+      <td>11:11:00</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="board" id="">
+      </td>
+      <td class="title">2222</td>
+      <td>11:22:00</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="checkbox" name="board" id="">
+      </td>
+      <td class="title">33333</td>
+      <td>11:33:00</td>
+    </tr>
+  </table>
+
+  <button id="logButton">로그</button>
+
+  <script>
+    const checkAll = $('input:checkbox:first');
+    checkAll.click(function () {
+      if ($(this).is(':checked')) {
+        $('input:checkbox').prop('checked', true);
+      } else {
+        $('input:checkbox').prop('checked', false);
+      }
+    });
+
+    const checks = $('input:checkbox[name=board]');
+    checks.click(function () {
+      const checked = $('input:checkbox[name=board]:checked');
+      if (checked.length == checks.length) {
+        // 모두 체크된 상태
+        checkAll.prop('checked', true);
+      } else {
+        checkAll.prop('checked', false);
+      }
+    });
+
+    $('#logButton').click(function () {
+      if (checks.length == 0) {
+        alert('선택된 것이 없습니다');
+      } else {
+        const checked = $('input:checkbox[name=board]:checked');
+        checked.each(function () {
+          const title = $(this).parent()
+            .parent()
+            .children('td:nth-child(2)')
+            .text();
+          console.log(title);
+        });
+      }
+    });
+  </script>
 </body>
+
 </html>
