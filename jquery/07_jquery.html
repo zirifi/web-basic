@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <form>
+    <label for="id">아이디</label>
+    <input type="text" id="id">
+    <br>
+    <label for="password">비밀번호</label>
+    <input type="password" id="password">
+    <br>
+
+    성별
+    <input type="radio" name="gender" id="man">
+    <label for="man">남자</label>
+    <input type="radio" name="gender" id="woman">
+    <label for="woman">여자</label>
+
+    <br>
+    직업
+    <select name="job" id="job">
+      <option value="developer">개발자</option>
+      <option value="engineer">엔지니어</option>
+      <option value="artist">아트</option>
+    </select>
+      
+      <br>
+    <input type="checkbox" name="hobby" id="develop">
+    <label for="develop">개발</label>
+    <input type="checkbox" name="hobby" id="game">
+    <label for="game">게임</label>
+    <input type="checkbox" name="hobby" id="fishing">
+    <label for="fishing">낚시</label><br>
+    <input type="checkbox" name="hobby" id="workout">
+    <label for="workout">운동</label>
+    <input type="checkbox" name="hobby" id="reading">
+    <label for="reading">독서</label>
+    <input type="checkbox" name="hobby" id="music">
+    <label for="music">음악</label>
+    
+    <br>
+    <input type="reset" value="취소">
+    <input type="button" value="회원가입" id="signUpButton">
+
+  </form>
+
+  <script>
+  $('#signUpButton').click(function () {
+    const hobbyChecks = $('input:checkbox[name=habby]:checked');
+    console.log(hobbyChecks.length);
+  });
+  </script>
+
+</body>
+
+</html>
