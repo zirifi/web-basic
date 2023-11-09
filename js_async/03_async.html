@@ -18,14 +18,14 @@
 
     function loadDoc() {
       fetch('ajax_info.txt')
-        .then(response => response.text())
+        .then(response => response.json())
         // response 의 결과 text 값을 then 으로 리턴
-        .then(function (text) {
+        .then(function (json) {
           // fucntion 의 결과값을 then 에 넣음
-          document.getElementById('demo').innerText = text;
+
+          document.getElementById('demo').innerText = json.message;
         });
     }
-    // 많이 있어보이는 코드이다.
   </script>
 
 </body>
