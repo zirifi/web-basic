@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <div id="result"></div>
+
+
+   <script>
+    // ? 뗀 쿼리 문자열
+    const queryString = window.location.search.slice(1);
+
+    const queryParams = queryString.split('&');
+
+    // 결과 json 객체
+    let resultJson = {};
+
+    queryParams.forEach((e) => {
+      const keyValue = e.split('=');
+      const key = keyValue[0];
+      const value = keyValue[1];
+
+      resultJson[key] = decodeURIComponent(value);
+    });
+
+    console.log(resultJson);
+
+    document.getElementById('result').append(JSON.stringify(resultJson));
+
+  </script>
+</body>
+
+</html>
