@@ -19,13 +19,13 @@
       padding: 20px;
       margin-bottom: 5px;
       cursor: pointer;
-      background-color:rgb(196, 206, 223);
+      background-color: rgb(196, 206, 223);
       display: inline-block;
       margin-right: 5px;
     }
 
     body {
-      background-color:darkslateblue ;
+      background-color: rgb(45, 43, 60);
     }
   </style>
 </head>
@@ -43,10 +43,14 @@
 
       jsonArray.results.forEach((json) => {
         $('#list').append(`<li class="card" onclick="movePage(${json.id})">
-          <img src="https://image.tmdb.org/t/p/w500${json.poster_path}" width=200px height=200px>
+          <img src="https://image.tmdb.org/t/p/w500${json.poster_path}" width="200" height="200">
           <h4>${json.title}</h4>
         </li>`);
       });
+    }
+
+    function movePage(movieId) {
+      window.location.href = `12_exam_async.html?movieId=${movieId}`;
     }
     getData();
   </script>
